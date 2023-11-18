@@ -7,15 +7,15 @@ MIN_LENGTH = 8
 def main():
     """Function docstring"""
     # statements...
-    password = get_password("Your password is too short")
+    password = get_password("Password", "Your password is too short.")
     print_password(password)
 
 
-def get_password(error):
-    password = input("Password: ")
+def get_password(prompt, error):
+    password = input(prompt)
     while len(password) < MIN_LENGTH:
         print(error)
-        password = input("Password: ")
+        password = input(prompt)
     return password
 
 
